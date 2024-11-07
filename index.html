@@ -1,12 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>HTML Tutorial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Murilo Marcos de Melo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosarivo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Rosarivo', serif;
+            background-color: #2D2D2D;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 64px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 38px;
+            line-height: 1.4;
+        }
+
+        /* Logo */
+        .logo {
+            margin: 20px 0;
+            width: 150px; /* Ajuste conforme o tamanho desejado */
+            height: auto;
+        }
+
+        /* Seção Sobre Mim */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .about-section img {
+            border-radius: 50%;
+            width: 150px; /* Tamanho ajustável da foto */
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .about-text {
+            max-width: 600px;
+        }
+
+        /* Estilos para a seção de projetos */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .project-item {
+            background-color: #444;
+            padding: 20px;
+            font-size: 40px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Layout para desktop */
+        @media (min-width: 768px) {
+            .about-section {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .about-section img {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+            .projects {
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="logo.svg" alt="Logo de Murilo" class="logo">
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+        <!-- Seção Sobre Mim -->
+        <section class="about-section">
+            <img src="foto.jpg" alt="Foto de Murilo">
+            <div class="about-text">
+                <h1>Sobre Mim</h1>
+                <p>Esta é a minha breve biografia. Sou designer, e este é o meu portfólio onde compartilho meus projetos pessoais, acadêmicos e autorais. Navegue e conheça mais sobre o meu trabalho!</p>
+            </div>
+        </section>
 
+        <!-- Seção de Projetos -->
+        <section class="projects">
+            <a href="#projetos-pessoais" class="project-item">Projetos Pessoais</a>
+            <a href="#projetos-academicos" class="project-item">Projetos Acadêmicos</a>
+            <a href="#projetos-autorais" class="project-item">Projetos Autorais</a>
+        </section>
+    </div>
 </body>
 </html>
