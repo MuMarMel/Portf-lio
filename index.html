@@ -50,6 +50,7 @@
             width: 400px; /* Tamanho */
             height: 400px;
             object-fit: cover;
+            object-position: center;
             margin-bottom: 20px;
         }
         .about-text {
@@ -64,16 +65,32 @@
             width: 100%;
             max-width: 800px;
         }
-        .project-item {
-            background-color: #444;
-            padding: 20px;
-            font-size: 40px;
-            text-align: center;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-        }
+       .project-item {
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagens de capa para cada seção */
+.projetos-pessoais {
+    background-image: url('vultur.png');
+}
+
+.projetos-academicos {
+    background-image: url('caminho/para/sua-imagem-academicos.jpg');
+}
+
+.projetos-autorais {
+    background-image: url('caminho/para/sua-imagem-autorais.jpg');
+}
 
         /* Layout para desktop */
         @media (min-width: 768px) {
