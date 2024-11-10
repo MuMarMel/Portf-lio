@@ -49,7 +49,7 @@
         }
         .about-section img {
             border-radius: 50%;
-            width: 400px; /* Tamanho */
+            width: 400px;
             height: 400px;
             object-fit: cover;
             object-position: center;
@@ -67,29 +67,54 @@
             width: 100%;
             max-width: 800px;
         }
-      .project-item {
+        .project-item {
             background-color: #444;
-            padding: 20px;
-            font-size: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             text-align: center;
             border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
             color: white;
-}
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+        .project-item .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 40px; /* Espaço para o título */
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .project-item .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* Imagens de capa para cada seção */
-.projetos-pessoais {
-    background-image: url("vultur.png");
-}
-
-.projetos-academicos {
-    background-image: url('caminho/para/sua-imagem-academicos.jpg');
-}
-
-.projetos-autorais {
-    background-image: url('caminho/para/sua-imagem-autorais.jpg');
-}
+        /* Imagens de capa para cada seção */
+        .projetos-pessoais .image {
+            background-image: url("vultur.png");
+        }
+        .projetos-academicos .image {
+            background-image: url('caminho/para/sua-imagem-academicos.jpg');
+        }
+        .projetos-autorais .image {
+            background-image: url('caminho/para/sua-imagem-autorais.jpg');
+        }
 
         /* Layout para desktop */
         @media (min-width: 768px) {
@@ -125,9 +150,18 @@
 
         <!-- Seção de Projetos -->
         <section class="projects">
-            <a href="projetos_pessoais.html" class="project-item">Projetos Pessoais</a>
-            <a href="#projetos-academicos" class="project-item">Projetos Acadêmicos</a>
-            <a href="#projetos-autorais" class="project-item">Projetos Autorais</a>
+            <a href="projetos_pessoais.html" class="project-item projetos-pessoais">
+                <div class="image"></div>
+                <div class="title">Projetos Pessoais</div>
+            </a>
+            <a href="#projetos-academicos" class="project-item projetos-academicos">
+                <div class="image"></div>
+                <div class="title">Projetos Acadêmicos</div>
+            </a>
+            <a href="#projetos-autorais" class="project-item projetos-autorais">
+                <div class="image"></div>
+                <div class="title">Projetos Autorais</div>
+            </a>
         </section>
     </div>
 </body>
