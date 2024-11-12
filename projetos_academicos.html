@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Pessoais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosarivo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Rosarivo', serif;
+            background-color: #2D2D2D;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Logo responsivo */
+        .logo {
+            width: 100%;
+            height: 20vh; /* Ocupa 40% da altura da tela */
+            background: url('Logo Portfolio.svg') no-repeat center center;
+            background-size: contain;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Texto de introdução */
+        .intro-text {
+            font-size: 24px;
+            max-width: 800px;
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        /* Seção de ilustrações */
+        .illustrations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; /* ajuste automático no mobile */
+        }
+        .illustration-box {
+            background-color: #444;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .illustration-box img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .text-box {
+            padding: 10px;
+            padding-top: 30px;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        /* Layout para desktop */
+        @media (min-width: 768px) {
+            .intro-text {
+                text-align: center;
+            }
+            .illustrations {
+                gap: 20px;
+            }
+            .row-1 .illustration-box {
+                flex: 1;
+                height: 550px;
+                object-fit: contain
+            }
+            .row-2 .illustration-box {
+                flex: 1;
+                height: 500px; /* banner */
+                object-fit: contain
+            }
+            .row-3 .illustration-box {
+                flex: 1;
+                height: 550px;
+                object-fit: contain
+            }
+            .row-3 .illustration-box {
+                flex: 1;
+                height: 1000px; /* retrato */
+                object-fit: contain
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+
+        <!-- Título -->
+        <h1>Projetos Acadêmicos</h1>
+
+        <!-- Texto de introdução -->
+        <p class="intro-text">
+            Trabalhos acadêmicos realizados em períodos letivos da faculdade para aprendizado de diversas técnicas e ofícios.</p>
+
+        <!-- Seção de Ilustrações -->
+        <div class="illustrations">
+            <!-- Primeira linha de quadrados -->
+            <div class="row row-1">
+                <div class="illustration-box">
+                    <img src="material para portfolio/REX MURES 2.png" alt="Arte Rex Mures">
+                    <div class="text-box">Rex Mures, o cheiro da realeaza. é um projeto voltado a design de embalagem, com o intuito de agir contrário ao padrão de marcas de perfume. Quem nunca detestou entrar num vagão de metro ou em um ônibus apenas pra sentir o cheiro fortíssimo de perfume a ponto de ser nauseante, tal como o cheiro de um lixão? Rex Mures vai além, sendo o único perfume que vai te ajudar a cheirar podre de verdade.</div>
+                </div>
+                <div class="illustration-box">
+                    <img src="material para portfolio/REX MURES.png" alt="Capa Rex Mures">
+                    <div class="text-box">Capa para a embalagem do perfume. Inspirado por temáticas punk e grunge, a ilustração busca lembrar de tudo aquilo que é associado ao mau odor, de cigarro e poluição até ratos.</div>
+                </div>
+                <div class="illustration-box">
+                    <img src="Imagem 3" alt="Diagramação Embalagem Rex Mures">
+                    <div class="text-box">Colocar faca de corte da embalagem.</div>
+                </div>
+            </div>
+
+            <!-- Segunda linha: Banner horizontal -->
+            <div class="row row-2">
+                <div class="illustration-box">
+                    <img src="img4" alt="Arte 4">
+                    <div class="text-box">Banner para mídia social inspirado no personagem Vex de League of Legends</div>
+                </div>
+            </div>
+
+            <!-- Terceira linha: Retângulo e retrato -->
+            <div class="row row-3">
+                <div class="illustration-box">
+                    <img src="arte 4" alt="Arte 4">
+                    <div class="text-box">Arte conceitual do personagem Lily Evans.</div>
+                </div>
+                <div class="illustration-box">
+                    <img src="arte 5" alt="Arte 5">
+                    <div class="text-box">Edição de imagem para criação de estampa de camiseta com temas grunge e punk.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
