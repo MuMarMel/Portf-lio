@@ -46,59 +46,46 @@
             line-height: 1.4;
         }
 
-        /* Seção de ilustrações */
-        .illustrations {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px;
-            margin-top: 40px;
-        }
-
-        /* Moldura de imagens agrupadas */
-        .grouped-images {
+        /* Seção de ilustrações em grade */
+        .grid-images {
             display: grid;
-            grid-template-areas: 
-                "portrait description"
-                "top-right description"
-                "bottom-right description";
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 20px;
-            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
         }
-        .portrait {
-            grid-area: portrait;
-        }
-        .top-right {
-            grid-area: top-right;
-        }
-        .bottom-right {
-            grid-area: bottom-right;
-        }
-        .description {
-            grid-area: description;
-            padding: 10px;
-            font-size: 20px;
-            line-height: 1.4;
-            text-align: left;
-        }
-        .grouped-images img {
+        .grid-images img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             object-fit: cover;
         }
 
-        /* mobile */
+        /* Imagens com descrição à direita */
+        .image-description-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+        .image-description-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .description {
+            padding: 10px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        /* Mobile */
         @media (max-width: 768px) {
-            .grouped-images {
-                grid-template-areas: 
-                    "portrait"
-                    "top-right"
-                    "bottom-right"
-                    "description";
+            .grid-images {
+                grid-template-columns: 1fr;
+            }
+            .image-description-section {
                 grid-template-columns: 1fr;
             }
             .description {
@@ -119,22 +106,27 @@
             Trabalhos acadêmicos realizados em períodos letivos da faculdade para aprendizado de diversas técnicas e ofícios.
         </p>
 
-        <!-- Seção de Ilustrações -->
-        <div class="illustrations">
-            <!-- Moldura de imagens agrupadas -->
-            <div class="grouped-images">
-                <div class="portrait">
-                    <img src="material para portfolio/REX MURES 2.png" alt="Arte Rex Mures">
-                </div>
-                <div class="top-right">
-                    <img src="material para portfolio/REX MURES.png" alt="Capa Rex Mures">
-                </div>
-                <div class="bottom-right">
-                    <img src="material para portfolio/1c55f987-4742-44a3-ac78-167ad751713d.jpg" alt="Foto Embalagem Rex Mures">
-                </div>
-                <div class="description">
-                    <p>Rex Mures, o cheiro da realeza, é um projeto voltado a design de embalagem com o objetivo de desafiar os padrões das marcas de perfume e ir contra o fluxo. Quem nunca detestou entrar num vagão de metro ou em um ônibus apenas pra sentir o cheiro fortíssimo de perfume a ponto de ser nauseante, tal como o cheiro de um lixão? Rex Mures vai além, sendo o único perfume que vai te ajudar a cheirar podre de verdade. Inicialmente a ideia por trás do formato de embalagem seria igual as embalagens de cigarros, com uma tampa que abrisse para trás, mas devido a complicações estruturais, o formato foi modificado para ter um design diferente. Agora, a embalagem possui uma "língua" que vem de trás e fecha por cima, com uma caixa removível por dentro que segura o frasco de perfume para proteção.</p>
-                </div>
+        <!-- Seção de imagens em grade -->
+        <div class="grid-images">
+            <img src="material para portfolio/REX MURES 2.png" alt="Imagem 1">
+            <img src="material para portfolio/REX MURES.png" alt="Imagem 2">
+            <img src="material para portfolio/1c55f987-4742-44a3-ac78-167ad751713d.jpg" alt="Imagem 3">
+            <img src="material para portfolio/nova-imagem.jpg" alt="Imagem 4">
+        </div>
+
+        <!-- Primeira seção com descrição -->
+        <div class="image-description-section">
+            <img src="material para portfolio/image1.jpg" alt="Imagem com descrição 1">
+            <div class="description">
+                <p>Descrição detalhada sobre o projeto ou arte exibida na imagem à esquerda. Inclua informações como o contexto, o objetivo ou a inspiração do trabalho.</p>
+            </div>
+        </div>
+
+        <!-- Segunda seção com descrição -->
+        <div class="image-description-section">
+            <img src="material para portfolio/image2.jpg" alt="Imagem com descrição 2">
+            <div class="description">
+                <p>Descrição detalhada sobre outro projeto ou arte exibida na imagem à esquerda. Adicione informações relevantes para dar contexto ao trabalho.</p>
             </div>
         </div>
     </div>
