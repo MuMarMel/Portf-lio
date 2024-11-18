@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Autorais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosarivo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Rosarivo', serif;
+            background-color: #2D2D2D;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Logo responsivo */
+        .logo {
+            width: 100%;
+            height: 20vh;
+            background: url('Logo Portfolio.svg') no-repeat center center;
+            background-size: contain;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Texto de introdução */
+        .intro-text {
+            font-size: 24px;
+            max-width: 800px;
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        /* Scrapbook */
+        .scrapbook {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+        .scrapbook img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transform: rotate(var(--rotation));
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Rotação para simular um scrap book */
+        .scrapbook img:nth-child(1) { --rotation: -2deg; }
+        .scrapbook img:nth-child(2) { --rotation: 3deg; }
+        .scrapbook img:nth-child(3) { --rotation: -1.5deg; }
+        .scrapbook img:nth-child(4) { --rotation: 2deg; }
+        .scrapbook img:nth-child(5) { --rotation: -3deg; }
+        .scrapbook img:nth-child(6) { --rotation: 1deg; }
+
+        /* Efeito de hover */
+        .scrapbook img:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .intro-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+
+        <!-- Título -->
+        <h1>Projetos Autorais</h1>
+
+        <!-- Texto de introdução -->
+        <p class="intro-text">
+            Uma coleção de projetos autorais que demonstram minha criatividade e paixão por design. Esses projetos exploram diversas formas de arte, conceitos e experimentos criativos.
+        </p>
+
+        <!-- Scrapbook de imagens -->
+        <div class="scrapbook">
+            <img src="material para portfolio/project1.jpg" alt="Projeto 1">
+            <img src="material para portfolio/project2.jpg" alt="Projeto 2">
+            <img src="material para portfolio/project3.jpg" alt="Projeto 3">
+            <img src="material para portfolio/project4.jpg" alt="Projeto 4">
+            <img src="material para portfolio/project5.jpg" alt="Projeto 5">
+            <img src="material para portfolio/project6.jpg" alt="Projeto 6">
+        </div>
+    </div>
+</body>
+</html>
