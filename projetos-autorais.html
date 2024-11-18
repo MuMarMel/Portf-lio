@@ -22,7 +22,6 @@
             padding: 20px;
         }
 
-        /* Logo responsivo */
         .logo {
             width: 100%;
             height: 20vh;
@@ -30,60 +29,56 @@
             background-size: contain;
         }
 
-        /* Título */
         h1 {
             font-size: 40px;
             text-align: center;
             margin: 20px 0;
         }
 
-        /* Texto de introdução */
         .intro-text {
             font-size: 24px;
             max-width: 800px;
-            text-align: center;
+            text-align: left;
             margin: 20px 0;
             line-height: 1.4;
         }
 
-        /* Layout principal atualizado */
         .frames-container {
             display: flex;
             flex-direction: column; /* Alinha as molduras verticalmente */
-            gap: 40px; /* Espaço entre as molduras */
+            gap: 60px; /* Espaço entre molduras */
             width: 100%;
             max-width: 1200px;
-            margin: 0 auto; /* Centraliza o conteúdo */
+            margin: 0 auto; 
         }
 
         /* Moldura de imagens */
         .image-frame {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza o conteúdo */
+            align-items: center; 
             width: 100%;
-            margin: 0 auto; /* Centraliza a moldura */
+            margin: 0 auto; 
         }
 
         .image-frame .images {
             display: flex;
-            justify-content: space-around; /* Garante que as imagens se ajustem ao espaço disponível */
+            justify-content: space-around; 
             gap: 10px;
             width: 100%;
         }
 
         .image-frame .images img {
-            flex: 1; /* Todas as imagens terão o mesmo tamanho */
-            max-width: 300px; /* Define um limite de largura para as imagens */
+            flex: 1; /* oq flex faz mesmo? */
+            max-width: 400px; 
             border-radius: 8px;
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsividade para dispositivos menores */
         @media (max-width: 768px) {
             .image-frame .images {
-                flex-direction: column; /* Empilha as imagens verticalmente no celular */
+                flex-direction: column; 
                 gap: 10px;
             }
         }
@@ -93,34 +88,30 @@
     <div class="container">
         <div class="logo"></div>
 
-        <!-- Título -->
         <h1>Projetos Autorais</h1>
 
         <!-- Texto de introdução -->
         <p class="intro-text">
-            Uma coleção de projetos autorais que demonstram minha criatividade e paixão por design. Esses projetos exploram diversas formas de arte, conceitos e experimentos criativos.
+            Projetos diversos realizados em ambientes de trabalho, voltado a personalização de carros e artes gráficas para adesivos e banners.
         </p>
 
-        <!-- Molduras dos projetos -->
+        <!-- Molduras -->
         <div class="frames-container">
-            <!-- Moldura para os projetos 1, 2 e 3 -->
             <div class="image-frame">
                 <div class="images">
                     <img src="material para portfolio/d32cbc0c-3b8d-4618-9938-ef4593c1400a.jpg" alt="Projeto 1">
                     <img src="material para portfolio/76946ef5-3039-4f37-b4fd-e50fd9967c61.jpg" alt="Projeto 2">
                     <img src="material para portfolio/07b9b20f-3334-4849-a9d2-2a2d44c22238.jpg" alt="Projeto 3">
                 </div>
-                <p>Descrição dos projetos 1, 2 e 3: Estes projetos autorais refletem o uso criativo de formas e cores para transmitir conceitos únicos.</p>
+                <p>Personalização visual de um Nivus para uma empresa de segurança de portaria. Foi solicitado pelo cliente um layout completamente novo para aplicação em sua frota já existente de carros. Envisionando trazer uma estética profissional e "clean", fiz uso de tons monocromáticos, com um desenho de uma águia, representando a mesma já presente no logo do cliente.</p>
             </div>
-
-            <!-- Moldura para os projetos 4, 5 e 6 -->
             <div class="image-frame">
                 <div class="images">
                     <img src="material para portfolio/2af40d17-aa97-4380-aaa7-23ec03b07e8a.jpg" alt="Projeto 4">
                     <img src="material para portfolio/8c33dc83-d106-4506-840f-d5b0973c7dd0.jpg" alt="Projeto 5">
                     <img src="material para portfolio/b94ab19d-114f-484c-82d5-3077344c5995.jpg" alt="Projeto 6">
                 </div>
-                <p>Descrição dos projetos 4, 5 e 6: Trabalhos que misturam técnicas modernas e tradicionais, explorando novas perspectivas artísticas.</p>
+                <p>Personalização e adesivação de um Renault Master para uma loja de bazar e produtos diversos. Procurei fazer uso de curvas e uma palheta de cores uniforme para brincar com as formas e criar um design que chame atenção e seja "refrescante" ao olho.</p>
             </div>
         </div>
     </div>
