@@ -46,74 +46,44 @@
             line-height: 1.4;
         }
 
+        /* Layout principal atualizado */
+        .frames-container {
+            display: flex;
+            flex-direction: column; /* Alinha as molduras verticalmente */
+            gap: 40px; /* Espaço entre as molduras */
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto; /* Centraliza o conteúdo */
+        }
+
         /* Moldura de imagens */
         .image-frame {
             display: flex;
             flex-direction: column;
+            align-items: center; /* Centraliza o conteúdo */
             width: 100%;
-            max-width: 500px;
-            margin: 20px;
+            margin: 0 auto; /* Centraliza a moldura */
         }
 
         .image-frame .images {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around; /* Garante que as imagens se ajustem ao espaço disponível */
             gap: 10px;
-            margin-bottom: 15px;
+            width: 100%;
         }
 
         .image-frame .images img {
-            width: 100%;
-            height: auto;
+            flex: 1; /* Todas as imagens terão o mesmo tamanho */
+            max-width: 300px; /* Define um limite de largura para as imagens */
             border-radius: 8px;
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        .image-frame .images img:nth-child(1) {
-            width: 32%; /* Para ajustar as 3 imagens lado a lado */
-        }
-
-        .image-frame .images img:nth-child(2) {
-            width: 32%;
-        }
-
-        .image-frame .images img:nth-child(3) {
-            width: 32%;
-        }
-
-        /* Descrição abaixo das imagens */
-        .description {
-            font-size: 18px;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        /* Layout principal */
-        .frames-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        /* Responsividade para mobile */
+        /* Responsividade para dispositivos menores */
         @media (max-width: 768px) {
-            .intro-text {
-                font-size: 18px;
-            }
-            .image-frame {
-                max-width: 100%;
-            }
-            .image-frame .images img:nth-child(1),
-            .image-frame .images img:nth-child(2),
-            .image-frame .images img:nth-child(3) {
-                width: 100%; /* Imagens ocupam toda a largura em dispositivos móveis */
-            }
             .image-frame .images {
-                flex-direction: column;
+                flex-direction: column; /* Empilha as imagens verticalmente no celular */
                 gap: 10px;
             }
         }
@@ -131,30 +101,26 @@
             Uma coleção de projetos autorais que demonstram minha criatividade e paixão por design. Esses projetos exploram diversas formas de arte, conceitos e experimentos criativos.
         </p>
 
-        <!-- Molduras de imagens -->
+        <!-- Molduras dos projetos -->
         <div class="frames-container">
-            <!-- Primeira moldura -->
+            <!-- Moldura para os projetos 1, 2 e 3 -->
             <div class="image-frame">
                 <div class="images">
                     <img src="material para portfolio/d32cbc0c-3b8d-4618-9938-ef4593c1400a.jpg" alt="Projeto 1">
                     <img src="material para portfolio/76946ef5-3039-4f37-b4fd-e50fd9967c61.jpg" alt="Projeto 2">
                     <img src="material para portfolio/07b9b20f-3334-4849-a9d2-2a2d44c22238.jpg" alt="Projeto 3">
                 </div>
-                <p class="description">
-                    Descrição dos projetos 1, 2 e 3: Estes projetos autorais refletem o uso criativo de formas e cores para transmitir conceitos únicos.
-                </p>
+                <p>Descrição dos projetos 1, 2 e 3: Estes projetos autorais refletem o uso criativo de formas e cores para transmitir conceitos únicos.</p>
             </div>
 
-            <!-- Segunda moldura -->
+            <!-- Moldura para os projetos 4, 5 e 6 -->
             <div class="image-frame">
                 <div class="images">
                     <img src="material para portfolio/2af40d17-aa97-4380-aaa7-23ec03b07e8a.jpg" alt="Projeto 4">
                     <img src="material para portfolio/8c33dc83-d106-4506-840f-d5b0973c7dd0.jpg" alt="Projeto 5">
                     <img src="material para portfolio/b94ab19d-114f-484c-82d5-3077344c5995.jpg" alt="Projeto 6">
                 </div>
-                <p class="description">
-                    Descrição dos projetos 4, 5 e 6: Trabalhos que misturam técnicas modernas e tradicionais, explorando novas perspectivas artísticas.
-                </p>
+                <p>Descrição dos projetos 4, 5 e 6: Trabalhos que misturam técnicas modernas e tradicionais, explorando novas perspectivas artísticas.</p>
             </div>
         </div>
     </div>
